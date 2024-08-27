@@ -3,30 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>You have a message</title>
+    <title>Will You Be My Girlfriend?</title>
     <style>
         body, html {
             height: 100%;
             margin: 0;
-            background-color: #CCCCFF; /* Periwinkle background color */
+            background-color: #8f99fb; /* Solid periwinkle background color */
             display: flex;
             justify-content: center;
             align-items: center;
             font-family: 'Comic Sans MS', sans-serif;
-            color: #4b0082; /* Indigo color for text */
-            flex-direction: column;
-        }
-        h1 {
-            font-size: 2.5em;
-            margin-bottom: 50px;
+            color: #FFFFFF; /* White text color for better visibility */
+            overflow: hidden; /* Hide overflow from floating elements */
+            flex-direction: column; /* Center everything vertically */
         }
         .envelope {
             font-size: 100px;
             cursor: pointer;
             transition: transform 0.3s ease;
+            background: none; /* Remove the white background */
+            box-shadow: none; /* Remove the shadow */
         }
         .envelope:hover {
-            transform: scale(1.1); /* Slightly enlarge on hover */
+            transform: scale(1.2); /* Slightly enlarge on hover */
+        }
+        .open-me {
+            font-size: 1.5em;
+            margin-top: 20px;
+            animation: pulse 2s infinite;
+            text-align: center;
+        }
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+            100% {
+                transform: scale(1);
+            }
         }
         @keyframes explode {
             0% {
@@ -43,23 +59,107 @@
             }
         }
         .exploding {
-            animation: explode 0.5s forwards; /* Explosion effect */
+            animation: explode 1s forwards; /* Explosion effect with longer duration */
+        }
+        .floating-hearts {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            overflow: hidden;
+        }
+        .heart-emoji {
+            position: absolute;
+            font-size: 2em; /* Size of the heart emojis */
+            animation: floatEmoji 12s infinite ease-in-out;
+            opacity: 0;
+        }
+        @keyframes floatEmoji {
+            0% {
+                transform: translateY(100vh);
+                opacity: 0.7;
+            }
+            50% {
+                transform: translateY(-50vh);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-100vh);
+                opacity: 0;
+            }
+        }
+        .heart-emoji:nth-child(1) {
+            left: 10%;
+            animation-duration: 14s;
+            animation-delay: 0s;
+        }
+        .heart-emoji:nth-child(2) {
+            left: 20%;
+            animation-duration: 16s;
+            animation-delay: 2s;
+        }
+        .heart-emoji:nth-child(3) {
+            left: 30%;
+            animation-duration: 18s;
+            animation-delay: 4s;
+        }
+        .heart-emoji:nth-child(4) {
+            left: 40%;
+            animation-duration: 20s;
+            animation-delay: 6s;
+        }
+        .heart-emoji:nth-child(5) {
+            left: 50%;
+            animation-duration: 22s;
+            animation-delay: 1s;
+        }
+        .heart-emoji:nth-child(6) {
+            left: 60%;
+            animation-duration: 19s;
+            animation-delay: 3s;
+        }
+        .heart-emoji:nth-child(7) {
+            left: 70%;
+            animation-duration: 21s;
+            animation-delay: 5s;
+        }
+        .heart-emoji:nth-child(8) {
+            left: 80%;
+            animation-duration: 23s;
+            animation-delay: 7s;
+        }
+        .heart-emoji:nth-child(9) {
+            left: 90%;
+            animation-duration: 17s;
+            animation-delay: 9s;
+        }
+        .heart-emoji:nth-child(10) {
+            left: 15%;
+            animation-duration: 15s;
+            animation-delay: 3s;
         }
     </style>
-    <script>
-        function explodeAndRedirect() {
-            const envelope = document.querySelector('.envelope');
-            envelope.classList.add('exploding'); // Add the explosion class
-            setTimeout(() => {
-                window.location.href = 'question.html'; // Redirect after the explosion
-            }, 500); // Match the animation duration
-        }
-    </script>
 </head>
 <body>
-    <h1>You have a message</h1>
-    <div class="envelope" onclick="explodeAndRedirect()">
+    <div class="envelope" onclick="window.location.href='message.html'">
         💌
+    </div>
+    <div class="open-me">
+        Open me
+    </div>
+    <div class="floating-hearts">
+        <div class="heart-emoji">❤️</div>
+        <div class="heart-emoji">💖</div>
+        <div class="heart-emoji">💘</div>
+        <div class="heart-emoji">💝</div>
+        <div class="heart-emoji">💓</div>
+        <div class="heart-emoji">💕</div>
+        <div class="heart-emoji">💗</div>
+        <div class="heart-emoji">💞</div>
+        <div class="heart-emoji">💟</div>
+        <div class="heart-emoji">💜</div>
     </div>
 </body>
 </html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Something I Want to Say...</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            background-color: #8f99fb; /* Periwinkle background color */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Comic Sans MS', sans-serif;
+            color: #FFFFFF; /* White text color */
+            text-align: center;
+            padding: 20px;
+            flex-direction: column;
+        }
+        .message-container {
+            max-width: 600px;
+        }
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            animation: fadeIn 2s ease-in-out;
+        }
+        p {
+            font-size: 1.2em;
+            line-height: 1.6;
+            animation: slideIn 2s ease-in-out;
+            margin-bottom: 20px;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes slideIn {
+            from { transform: translateY(20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        .heart-emoji {
+            font-size: 50px;
+            margin-top: 20px;
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+        .next-button {
+            background-color: #FFFFFF; /* White button background */
+            color: #8f99fb; /* Periwinkle text color for the button */
+            padding: 15px 30px;
+            border: none;
+            border-radius: 10px;
+            font-size: 18px;
+            cursor: pointer;
+            margin-top: 30px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+        .next-button:hover {
+            background-color: #f0f0f0; /* Slightly darker white for hover */
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="message-container">
+        <h1>Something I Want to Say...</h1>
+        <p>
+            I know we don't get to talk as much because of how busy we both are, but every time we do, and especially when we go out, you make me feel so good. You have this incredible way of making everything feel right when we're together.
+        </p>
+        <p>
+            I’ve been thinking a lot about how amazing it would be to take things more seriously with you. I really cherish the moments we share, and I’d love for us to build something even more special together.
+        </p>
+        <p>
+            You bring so much joy into my life, and I just wanted to tell you how much I appreciate you and what we have.
+        </p>
+        <div class="heart-emoji">❤️</div>
+        <button class="next-button" onclick="window.location.href='nextpage.html'">Next</button>
+    </div>
+</body>
+</html>
