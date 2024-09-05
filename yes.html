@@ -85,8 +85,20 @@
 </head>
 <body>
     <div style="text-align: center;">
-        <h1>Yay! 🎉</h1>
-        <p>I'm so excited to start this journey with you!</p>
+        <h1>😘</h1>
+<p>Turn around now!</p>
+<p id="current-date"></p>
+
+<script>
+    // Get the current date
+    const today = new Date();
+    const options = { year: 'numeric', month: 'long', day: 'numeric' };
+    const formattedDate = today.toLocaleDateString('en-US', options);
+
+    // Display the date in the paragraph with id "current-date"
+    document.getElementById('current-date').textContent = formattedDate;
+</script>
+
     </div>
 </body>
 </html>
